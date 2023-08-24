@@ -1,11 +1,15 @@
+PROJECT = main
+WORKDIR = /opt/app
+DOCKER_IMAGE = silkeh/clang
+
 build:
-	clang++ main.cpp
+	clang++ -o ${PROJECT} ${PROJECT}.cpp
 
 clean:
-	rm ./a.out
+	rm ${PROJECT}
 
 run:
-	./a.out
+	./${PROJECT}
 
 bash:
-	docker run -v $(pwd):/opt/main -w /opt/main -it silkeh/clang bash
+	docker run -v ${PWD}:${WORKDIR} -w ${WORKDIR} -it ${DOCKER_IMAGE} bash

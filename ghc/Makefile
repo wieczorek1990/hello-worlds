@@ -1,11 +1,15 @@
+PROJECT = main
+WORKDIR = /opt/app
+DOCKER_IMAGE = haskell
+
 build:
-	ghc main.hs
+	ghc ${PROJECT}.hs
 
 clean:
-	rm main main.hi main.o
+	rm ${PROJECT} ${PROJECT}.hi ${PROJECT}.o
 
 run:
-	./main
+	./${PROJECT}
 
 bash:
-	docker run -v $(pwd):/opt/main -w /opt/main -it haskell bash
+	docker run -v ${PWD}:${WORKDIR} -w ${WORKDIR} -it ${DOCKER_IMAGE} bash
