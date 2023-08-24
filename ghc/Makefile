@@ -6,3 +6,6 @@ clean:
 
 run:
 	./main
+
+bash:
+	docker run -v $(pwd):/opt/main -w /opt/main -it haskell bash
