@@ -1,2 +1,3 @@
 # hello-worlds
-"Hello world" programs.
+
+"Hello, World!" programs along with Makefile's.
