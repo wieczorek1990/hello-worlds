@@ -13,6 +13,3 @@ run:
 
 bash:
 	docker run -v ${PWD}:${WORKDIR} -w ${WORKDIR} -it ${DOCKER_IMAGE} bash
-
-install:
-	microdnf install -y make
