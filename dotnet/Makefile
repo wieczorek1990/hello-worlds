@@ -1,4 +1,4 @@
-PROJECT = Program
+PROJECT = Main
 WORKDIR = /opt/app
 DOCKER_IMAGE = mcr.microsoft.com/dotnet/sdk
 
