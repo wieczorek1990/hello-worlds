@@ -1,1 +1,5 @@
-print("Hello, World!")
+func main() {
+    print("Hello, World!")
+}
+
+main()
