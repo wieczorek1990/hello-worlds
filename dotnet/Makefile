@@ -2,8 +2,10 @@ PROJECT = Program
 WORKDIR = /opt/app
 DOCKER_IMAGE = mcr.microsoft.com/dotnet/sdk
 
+FLAGS = -c Release
+
 build:
-	dotnet publish -c Release -o ${PROJECT}
+	dotnet publish ${FLAGS} -o ${PROJECT}
 
 clean:
 	rm -r ${PROJECT}/ bin/ obj/

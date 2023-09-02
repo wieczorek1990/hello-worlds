@@ -1,8 +1,6 @@
-PROJECT = main
+PROJECT = hello_world
 WORKDIR = /opt/app
 DOCKER_IMAGE = golang
-
-MODULE = hello_world
 
 build:
 	go build
@@ -11,10 +9,10 @@ run:
 	go run .
 
 run-executable:
-	./${MODULE}
+	./${PROJECT}
 
 clean:
-	rm ${MODULE}
+	rm ${PROJECT}
 
 bash:
 	docker run -v ${PWD}:${WORKDIR} -w ${WORKDIR} -it ${DOCKER_IMAGE} bash

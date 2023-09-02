@@ -1,3 +1,3 @@
 #!/bin/bash
-# Installer
+# Installer.
 microdnf install -y make
